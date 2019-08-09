@@ -32,8 +32,13 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    new Phaser.Game(this.state.game)
+  }
+
   render() {
     const { initialize, game } = this.state
+    console.log(initialize, game)
     return <IonPhaser game={game} initialize={initialize} />
   }
 }
